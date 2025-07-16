@@ -1,0 +1,6 @@
+flask
+newspaper3k
+beautifulsoup4
+markdown
+google-generativeai
+python-dotenv
