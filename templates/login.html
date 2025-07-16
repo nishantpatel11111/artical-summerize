@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Login | Gemini Summarizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .bg-overlay {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(2px);
+        }
+    </style>
 </head>
-<body class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h2 class="text-2xl font-semibold text-center mb-6 text-blue-600">🔐 Login to Gemini Summarizer</h2>
+<body class="min-h-screen flex items-center justify-center">
+    <div class="bg-overlay shadow-2xl rounded-xl p-8 w-full max-w-md mx-4 sm:mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8 text-blue-700 drop-shadow">🔐 Login to Gemini Summarizer</h2>
 
-        <form method="POST" class="space-y-4">
+        <form method="POST" class="space-y-6">
             <div>
-                <label class="block text-gray-700">Username</label>
-                <input type="text" name="username" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <label class="block text-gray-700 font-medium mb-1">Username</label>
+                <input type="text" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition" placeholder="Enter your username" required>
             </div>
             <div>
-                <label class="block text-gray-700">Password</label>
-                <input type="password" name="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <label class="block text-gray-700 font-medium mb-1">Password</label>
+                <input type="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition" placeholder="Enter your password" required>
             </div>
-            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Login</button>
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-500 transition shadow-lg">Login</button>
         </form>
 
         {% with messages = get_flashed_messages() %}
             {% if messages %}
-                <div class="mt-4 text-red-500">
+                <div class="mt-6 text-red-600 text-center">
                     {% for message in messages %}
                         <p>{{ message }}</p>
                     {% endfor %}
                 </div>
             {% endif %}
         {% endwith %}
+        <div class="flex justify-center gap-4 mt-6">
+            <a href="/about" class="text-blue-600 hover:underline">ℹ️ About Us</a>
+            <a href="/summarize" class="text-blue-600 hover:underline">Summarize</a>
+        </div>
     </div>
 </body>
 </html>

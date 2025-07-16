@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Gemini Summarizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .bg-overlay {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+    <div class="bg-overlay shadow-2xl rounded-xl p-8 w-full max-w-lg mx-4 sm:mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-6 text-blue-700 drop-shadow">About Us</h2>
+        <p class="text-gray-700 text-lg mb-4 text-center">Gemini Summarizer is a web application designed to help users quickly summarize news articles using advanced AI technology. Our mission is to make information more accessible and digestible for everyone.</p>
+        <ul class="list-disc pl-6 mb-4 text-gray-600">
+            <li>Powered by Google's Gemini generative AI</li>
+            <li>Fast and accurate article summarization</li>
+            <li>Simple, secure, and user-friendly interface</li>
+        </ul>
+        <div class="flex justify-center gap-4 mt-6">
+            <a href="/" class="text-blue-600 hover:underline">Login</a>
+            <a href="/summarize" class="text-blue-600 hover:underline">Summarize</a>
+        </div>
+    </div>
+</body>
+</html>

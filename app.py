@@ -79,6 +79,12 @@ def download():
         return redirect(url_for('login'))
     return send_file("summarized_article.txt", as_attachment=True)
 
+
+# Route: About Us
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 # Route: Logout
 @app.route('/logout')
 def logout():
